@@ -1,0 +1,609 @@
+---
+title: "Potential extinction cascades in a desert ecosystem"
+author: "Adam J Eichenwald, Nina Fefferman, Michael Reed"
+date: "2023-11-27"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+We load in the required data and libraries for the analysis
+```{r}
+library(data.table)
+library(NetworkExtinction)
+library(tidyverse)
+library(igraph)
+library(ggplot2)
+
+#This is the adjacency matrix that we use to create the food web. It is weighted, so all plants are aggregated into a single node due to the calculation issues as described in the paper
+load("prey_importance_adjacency.RData")
+
+#This is a data frame that has the scientific name and order of all the birds in the food web. It is used when we split the bird species into residents and non-residents
+load("speciesorder.Rdata")
+
+#This is a data frame that has all of the taxonomic information about the nodes
+load("vertices1.RData")
+
+#This is a vector of 6 letter bird codes, which are used by eBird. All birds in this vector are considered to be year-long residents of the Mojave Desert for the majority of the year. 
+load("vector.RData")
+
+```
+
+Then we create the graph itself
+
+``` {r}
+#This code takes the adjacency matrix and uses iGraph to create the actual network. We make sure that the mode is directed so that predation only goes one way, and we say weighted is true so that the values in the adjacency matrix are considered to be weighted.
+fluxigraph<-graph_from_adjacency_matrix(
+  prey_importance,
+  mode = "directed",
+  weighted = TRUE)
+
+fluxigraph
+
+```
+
+We split the birds into resident and non-resident species for future use. Our vector of resident birds only has the six letter bird codes, which are not used in the network itself. So we need to make sure that we figure out which of the nodes in our network are associated with the bird codes.
+``` {r}
+residentspecies<-speciesorder%>%
+  filter(Species %in% vector)%>%
+  mutate(Split = "Resident")
+#We assume that any species that is not residential is a non-resident
+migratoryspecies<-speciesorder%>%
+  filter(!Species %in% vector)%>%
+  mutate(Split = "Non-resident")
+
+vertices1<-vertices1%>%
+  left_join(rbind(residentspecies, migratoryspecies)%>%
+              select(scientific_name, Split)%>%
+              rename(node = scientific_name))
+
+```
+
+Then we run a for loop to see how random primary extinctions among the different vertebrate groups will result in secondary extinctions. We prefer to save each individual output as its own .csv file in an external folder and then combine them all after the loop is finished. This prevents R's memory from getting filled up with data from previous loops.
+``` {r}
+#Create the directory to place our finished data files into
+dir.create("Extinctions")
+
+#Set the interaction strength threshold to loop as well so we only have to run this once
+for(g in seq(0.6,0.9,0.1)){
+  #We are going to run each interaction strength 100 times, each with a different random order of extinctions. So we leave a loop within the loop. This can be parallelized to make it go faster, we recommend parallelizing the 100 iterations rather than the interaction strength loop.
+  for(i in 1:100){
+    #Randomly sort the animals so that each of the 100 iterations has a completely random extinction order. The SimulateExtinctions function seems to only accept the row or column number that the species falls into in the adjacency matrix (e.g., if Canis latrans is the second species down in the row and across in the column, then the way we refer to it is with the number 2 instead of its name). So we match the names of the species we want to randomly sort to their row number in the adjacency matrix, and then we randomly sort those numbers.
+  mammalextinction<-sample(match((vertices1%>%
+                                    filter(class == "Mammalia"))$node,
+                                 rownames(prey_importance)))
+  reptileextinction<-sample(match((vertices1%>%
+                                    filter(class == "Reptilia"))$node,
+                                 rownames(prey_importance)))
+  birdextinction<-sample(match((vertices1%>%
+                                    filter(class == "Aves"))$node,
+                                  rownames(prey_importance)))
+  residentbirdsample<-sample(match((vertices1%>%
+                                     filter(class == "Aves" &
+                                              Split == "Resident"))$node,
+                                 rownames(prey_importance)))
+  migratorybirdsample<-sample(match((vertices1%>%
+                                     filter(class == "Aves" &
+                                              Split == "Non-resident")
+                                     )$node,
+                                 rownames(prey_importance)))
+  #Now we simulate the extinction cascades
+  mammal<-SimulateExtinctions(Network = fluxnetwork,
+                              Order =mammalextinction,
+                              Method = "Order",
+                              IS = g)
+  reptile<-SimulateExtinctions(Network = fluxnetwork, 
+                               Order = reptileextinction,
+                               Method = "Order",
+                               IS = g)
+  birdall<-SimulateExtinctions(Network = fluxnetwork, 
+                             Order = birdextinction,
+                             Method = "Order",
+                             IS = g)
+  birdr<-SimulateExtinctions(Network = fluxnetwork, 
+                             Order = residentbirdsample,
+                             Method = "Order",
+                             IS = g)
+  birdm<-SimulateExtinctions(Network = fluxnetwork, 
+                             Order = migratorybirdsample,
+                             Method = "Order",
+                             IS = g)
+  #Finally, we save all the outputs of the extinction cascades to their own individual csv file. We make sure that the filename and dataframe both specify what iteration it came from. 
+  write_csv(mammal[[1]]%>%
+              data.frame()%>%
+              mutate(Class = "Mammalia",
+                     IS = g,Iteration = i),
+            paste0("Extinctions/Mammalia_",g,"_",i,".csv"))
+  write_csv(reptile[[1]]%>%
+              data.frame()%>%
+              mutate(Class = "Reptilia",
+                     IS = g,Iteration = i),
+            paste0("Extinctions/Reptilia",g,"_",i,".csv"))
+    write_csv(birdall[[1]]%>%
+              data.frame()%>%
+              mutate(Class = "Aves",
+                     IS = g,Iteration = i,Specific = "All"),
+            paste0("Extinctions/Aves_all_",g,"_",i,".csv"))
+  write_csv(birdr[[1]]%>%
+              data.frame()%>%
+              mutate(Class = "Aves",
+                     IS = g,Iteration = i,Specific = "Residents"),
+            paste0("Extinctions/Aves_residents_",g,"_",i,".csv"))
+  write_csv(birdm[[1]]%>%
+              data.frame()%>%
+              mutate(Class = "Aves",
+                     IS = g,Iteration = i,Specific = "Nonresidents"),
+            paste0("Extinctions/Aves_nonresidents_",g,"_",i,".csv"))
+
+}
+}
+#Finally, we bring all those files back into R by reading them and combining them into a single data frame
+extinctioncascade<-list.files("Extinctions", full.names = TRUE)%>%
+  lapply(fread)%>%
+  rbindlist(fill=TRUE)
+ # Replace NA values in the column "column_name" with "replacement_value"
+extinctioncascade$Specific[is.na(extinctioncascade$Specific)] <- "Normal"
+```
+
+Prep results for plotting and plot!
+``` {r}
+#We use the plotrix package because it gives us a std.error function to use
+library(plotrix)
+ggplotextinctions1<-extinctioncascade%>%
+  filter(Specific=="Normal")%>%
+  filter(Class != "Aves")%>%
+  group_by(Class,IS, NumExt)%>%
+  summarize(mean=mean(AccSecExt),
+            upper = mean(AccSecExt)+std.error(AccSecExt),
+            lower = mean(AccSecExt)-std.error(AccSecExt))%>%
+  rbind(extinctioncascade%>%
+          filter(Class == "Aves")%>%
+          filter(Specific != "Residents"&
+                   Specific != "Nonresidents")%>%
+          mutate(Class = "Aves (All)")%>%
+          select(Class, IS, NumExt, AccSecExt)%>%
+          group_by(Class,IS, NumExt)%>%
+          summarize(mean=mean(AccSecExt),
+                    upper = mean(AccSecExt)+std.error(AccSecExt),
+                    lower = mean(AccSecExt)-std.error(AccSecExt)))%>%
+  rbind(extinctioncascade%>%
+          filter(Specific == "Residents")%>%
+          mutate(Class = "Aves (Year-long\nResidents)")%>%
+          select(Class, IS, NumExt, AccSecExt)%>%
+          group_by(Class,IS, NumExt)%>%
+          summarize(mean=mean(AccSecExt),
+                    upper = mean(AccSecExt)+std.error(AccSecExt),
+                    lower = mean(AccSecExt)-std.error(AccSecExt)))%>%
+  rbind(extinctioncascade%>%
+          filter(Specific == "Nonresidents")%>%
+          mutate(Class = "Aves (Non-Residents)")%>%
+          group_by(Class,IS, NumExt)%>%
+          summarize(mean=mean(AccSecExt),
+                    upper = mean(AccSecExt)+std.error(AccSecExt),
+                    lower = mean(AccSecExt)-std.error(AccSecExt)))
+ggplotextinctions1
+
+
+ggplot(data = ggplotextinctions1%>%
+         ungroup()%>%
+         mutate(IS = ifelse(IS == 0.6, "Threshold 60%", IS))%>%
+         mutate(IS = ifelse(IS == 0.7, "Threshold 70%", IS))%>%
+         mutate(IS = ifelse(IS == 0.8, "Threshold 80%", IS))%>%
+         mutate(IS = ifelse(IS == 0.9, "Threshold 90%", IS)), aes(NumExt, y= mean, color =Class)) +
+  geom_ribbon(
+              aes(ymin = lower,
+                  ymax = upper),
+              alpha = 0.3)+
+  geom_line()+facet_wrap("IS")+
+  ylab("Accumulated Secondary Extinctions")+theme_bw()+
+  theme(legend.text=element_text(size=13), 
+        axis.text = element_text(color = "black"),
+        # axis.text.x = element_text(angle = 45, vjust = 0.5),
+        strip.text.x = element_text(size = 13),
+        legend.title=element_text(size=13), 
+        axis.title = element_text(size = 13))+
+  xlab("Primary Extinctions (Nodes Removed)")
+
+
+```
+
+Then we calculate the Coleman Homophily Index. We want to make sure we are using all of the edges and nodes that we can, and since we don't need weighted edges for the index we can rely on the original food web where plants are split into different nodes.
+``` {r}
+library(netseg)
+node<-read.csv("Foodwebnodelist.csv")
+edge<-read.csv("FoodwebEdgelist.csv")
+colemangraph<-graph_from_data_frame(d=edge, vertices = node)
+coleman(reverse_edges(colemangraph), vattr = "taxon")
+```
+
+This next bit of code runs the subgraph enumeration, where we use an erdos-renyi graph based on our food web as a null model. We count the number of subgraphs that match up with our patterns (i.e., apparent competition, trophic cascades) and count the number of motifs where vertebrates appear in various positions in the graph. We do this 500 times.
+```{r}
+
+for (q in 1:500){
+# create a subgraph to search for
+apparentcomp <- graph(edges=c(1,2,3,2), directed=TRUE)
+# tritroph<-graph(edges=c(1,2,2,3), directed=TRUE)
+
+
+# plot(tritroph)
+# plot(apparentcomp)
+# find all subgraph isomorphisms of subgraph in g
+# tritrophgraph <- subgraph_isomorphisms(tritroph, weightedgraph, method = "vf2")
+
+# tritrophgraph<-setdiff(tritrophgraph,omnivoregraph)
+
+
+# add node attributes from vertices1 to weightedgraph
+# indegseq <- igraph::degree(weightedgraph, mode="in")
+# outdegseq<-igraph::degree(weightedgraph, mode="out")
+# randomgraph <- sample_degseq(out.deg = outdegseq, 
+#                           in.deg = indegseq, method = "simple")
+randomgraph<-sample_gnm(n=length(V(weightedgraph)),m=length(E(weightedgraph)),
+                    directed = TRUE)
+V(randomgraph)$name<-vertices1$node
+V(randomgraph)$taxon <- vertices1$Taxon[match(V(randomgraph)$name, vertices1$node)]
+
+# V(weightedgraph)$attribute2 <- vertices1$attribute2[match(V(weightedgraph)$name, vertices1$nodes)]
+apparentcompgraph <- subgraph_isomorphisms(apparentcomp, randomgraph, method = "vf2")
+
+# count the number of subgraphs in apparentcompgraph that match attribute requirements
+count1 <- 0  # count for subgraphs with all nodes having attribute Taxon = "Aves"
+count2 <- 0  # count for subgraphs with two nodes having attribute Taxon = "Aves" and directed edges going away from them
+count3<-0
+count4<-0
+count5<-0
+count6<-0
+count7<-0
+count8<-0
+count9<-0
+weight1<-NA
+weight2<-NA
+weight3<-NA
+weight4<-NA
+weight5<-NA
+weight6<-NA
+weight7<-NA
+weight8<-NA
+weight9<-NA
+for (i in seq_along(apparentcompgraph)) {
+  subgraph <- induced_subgraph(randomgraph, apparentcompgraph[[i]])
+  
+  # check if all nodes in the subgraph have attribute class = "Aves"
+  if (all(V(subgraph)$taxon == "Bird")) {
+    count1 <- count1 + 1
+    weight1<-c(weight1,mean(E(subgraph)$weight))
+  }
+  if (all(V(subgraph)$taxon == "Mammal")) {
+    count3 <- count3 + 1
+    weight3<-c(weight3,mean(E(subgraph)$weight))
+  }
+  if (all(V(subgraph)$taxon == "Reptile")) {
+    count5 <- count5 + 1
+    weight5<-c(weight5,mean(E(subgraph)$weight))
+  }
+  # check if there are two nodes with attribute class = "Aves" and directed edges going away from them
+  out_edges <- which(tail_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Bird"))
+  in_edges <- which(head_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Bird"))
+  if (length(out_edges) == 2 & length(in_edges) == 0) {
+    count2 <- count2 + 1
+    weight2<-c(weight2,mean(E(subgraph)$weight))
+  }
+  # check if there are two nodes with attribute class = "Aves" and directed edges going away from them
+  out_edges <- which(tail_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Mammal"))
+  in_edges <- which(head_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Mammal"))
+  if (length(out_edges) == 2 & length(in_edges) == 0) {
+    count4 <- count4 + 1
+    weight4<-c(weight4,mean(E(subgraph)$weight))
+  }
+  out_edges <- which(tail_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Reptile"))
+  in_edges <- which(head_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Reptile"))
+  if (length(out_edges) == 2 & length(in_edges) == 0) {
+    count6 <- count6 + 1
+    weight6<-c(weight6,mean(E(subgraph)$weight))
+  }
+  out_edges1 <- which(tail_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Reptile"))
+  out_edges2 <- which(tail_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Mammal"))
+  # in_edges <- which(head_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Reptile"))
+  if (length(out_edges1) == 1 & length(out_edges2) == 1) {
+    count7 <- count7 + 1
+    weight7<-c(weight7,mean(E(subgraph)$weight))
+  }
+  out_edges1 <- which(tail_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Bird"))
+  out_edges2 <- which(tail_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Mammal"))
+  # in_edges <- which(head_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Reptile"))
+  if (length(out_edges1) == 1 & length(out_edges2) == 1) {
+    count8 <- count8 + 1
+    weight8<-c(weight8,mean(E(subgraph)$weight))
+  }
+  out_edges1 <- which(tail_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Bird"))
+  out_edges2 <- which(tail_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Reptile"))
+  # in_edges <- which(head_of(subgraph, E(subgraph)) %in% which(V(subgraph)$taxon == "Reptile"))
+  if (length(out_edges1) == 1 & length(out_edges2) == 1) {
+    count9 <- count9 + 1
+    weight9<-c(weight9,mean(E(subgraph)$weight))
+  }
+}
+
+# print the counts
+cat("Count 1:", count1, "\n")
+cat("Count 2:", count2, "\n")
+se <- function(x) sd(x)/sqrt(length(x))
+weight1<-na.omit(weight1)
+weight2<-na.omit(weight2)
+weight3<-na.omit(weight3)
+weight4<-na.omit(weight4)
+weight5<-na.omit(weight5)
+weight6<-na.omit(weight6)
+weight7<-na.omit(weight7)
+weight8<-na.omit(weight8)
+weight9<-na.omit(weight9)
+subgraphdata<-data.frame(Number = c(count1,count2, count3, count4,count5,count6,
+                                    count7,count8,count9),
+                         Subgraph = c("All_three_birds",
+                                      "Birds_both_prey",
+                                      "All_three_mammals",
+                                      "Mammals_both_prey",
+                                      "All_three_reptiles",
+                                      "Reptiles_both_prey",
+                                      "Prey_mammal_reptile",
+                                      "Prey_mammal_bird",
+                                      "Prey_reptile_bird"),
+                         Mean_strength = c(mean(weight1),mean(weight2), mean(weight3),
+                                           mean(weight4),mean(weight5),mean(weight6),
+                                           mean(weight7),mean(weight8),mean(weight9)),
+                         Se_strength = c(se(weight1),se(weight2), se(weight3),
+                                         se(weight4),se(weight5),se(weight6),
+                                         se(weight7),se(weight8),se(weight9)),
+                         Type = "Apparent")
+subgraphdata<-subgraphdata%>%
+  mutate(Corrected_number = Number/2)
+# mutate(percent=Number/sumsubgraphs)%>%
+# mutate(expected = sumsubgraphs/9)
+conttable<-subgraphdata%>%
+  select(Corrected_number, Subgraph)%>%
+  pivot_wider(names_from = "Subgraph",values_from = "Corrected_number")%>%
+  data.frame()
+write_csv(conttable, paste0("Erdossubgraph/apparentconttablerandom_",q,".csv"))
+print(paste(q))
+}
+
+#tritrophic
+for (q in 13:200){
+randomgraph<-sample_gnm(n=length(V(inversegraph)),m=length(E(inversegraph)),
+                        directed = TRUE)
+V(randomgraph)$name<-vertices1$node
+V(randomgraph)$taxon <- vertices1$Taxon[match(V(randomgraph)$name, vertices1$node)]
+
+# V(weightedgraph)$attribute2 <- vertices1$attribute2[match(V(weightedgraph)$name, vertices1$nodes)]
+tritrophgraph <- subgraph_isomorphisms(tritroph, randomgraph, method = "vf2")
+
+for(i in 1:length(tritrophgraph)){
+  library(tidyverse)
+  library(data.table)
+  library(network)
+  library(igraph)
+  subgraph <- induced_subgraph(randomgraph, tritrophgraph[[i]])
+  if(length(E(subgraph))!=2){
+    next
+  }else{
+    # Get edges going into the subgraph
+    suppressMessages(edges <- data.frame(total_edges=igraph::degree(subgraph, V(subgraph), "total"),
+                                         in_edges =igraph::degree(subgraph, V(subgraph), "in"))%>%
+                       rownames_to_column("node")%>%
+                       left_join(vertices2))
+    apex<-edges%>%
+      data.frame()%>%
+      filter(total_edges == 1 &
+               in_edges == 1)
+    prey<-edges%>%
+      data.frame()%>%
+      filter(total_edges == 1 &
+               in_edges == 0)
+    meso<-edges%>%
+      data.frame()%>%
+      filter(total_edges == 2 &
+               in_edges == 1)
+    
+    write.csv(data.frame(Trophic_Level = c("Apex","Meso","Prey"),
+                         Taxon = c(apex$Taxon, meso$Taxon,prey$Taxon),
+                         Calc_trophic = c(apex$TL,meso$TL,
+                                          prey$TL),
+                         count=c(1,1,1),
+                         trophic_chain = c(i,i,i)),paste("Trophicholding/tritrophic_",
+                                                         i,".csv"))
+  }
+}
+
+trophiccascades<-list.files("Trophicholding/",full.names=TRUE)%>%
+  lapply(fread)%>%
+  rbindlist()
+trophicmotif<-trophiccascades%>%
+  group_by(Trophic_Level, Taxon)%>%
+  summarise(Total=sum(count))%>%
+  mutate(Motif="tritrophic")%>%
+  ungroup()%>%
+  mutate(Apex = "Any")%>%
+  rbind(trophiccascades%>%
+          group_by(trophic_chain)%>%
+          filter(Trophic_Level=="Apex"&
+                   Taxon == "Bird")%>%
+          ungroup()%>%
+          select(trophic_chain)%>%
+          inner_join(trophiccascades, multiple = "all")%>%
+          group_by(Trophic_Level, Taxon)%>%
+          summarise(Total=sum(count))%>%
+          mutate(Motif="tritrophic")%>%
+          ungroup()%>%
+          mutate(Apex  = "Bird"))%>%
+  rbind(trophiccascades%>%
+          group_by(trophic_chain)%>%
+          filter(Trophic_Level=="Apex"&
+                   Taxon == "Mammal")%>%
+          ungroup()%>%
+          select(trophic_chain)%>%
+          inner_join(trophiccascades, multiple = "all")%>%
+          group_by(Trophic_Level, Taxon)%>%
+          summarise(Total=sum(count))%>%
+          mutate(Motif="tritrophic")%>%
+          ungroup()%>%
+          mutate(Apex  = "Mammal"))%>%
+  rbind(trophiccascades%>%
+          group_by(trophic_chain)%>%
+          filter(Trophic_Level=="Apex"&
+                   Taxon == "Reptile")%>%
+          ungroup()%>%
+          select(trophic_chain)%>%
+          inner_join(trophiccascades, multiple = "all")%>%
+          group_by(Trophic_Level, Taxon)%>%
+          summarise(Total=sum(count))%>%
+          mutate(Motif="tritrophic")%>%
+          ungroup()%>%
+          mutate(Apex  = "Reptile"))%>%
+  mutate(iteration = q)
+write.csv(trophicmotif, paste0("Erdosrandomtritrophic/trophicmotifsoutput_",
+                               q,".csv"))
+file.remove(list.files("Trophicholding/",full.names=TRUE))
+
+}
+```
+
+Finally,we calculate z-scores using the data that we generated from the subgraphs.
+```{r}
+
+mutate<-dplyr::mutate
+randomapparent<-list.files("Erdossubgraph/", full.names = TRUE)%>%
+  lapply(fread)%>%
+  rbindlist()%>%
+  data.frame()%>%
+  mutate(number = rownames(.))%>%
+  pivot_longer(cols = -number,
+               names_to = "Subgraph",
+               values_to = "count")
+
+subgraphdatacomplete<-subgraphdata%>%
+  select(Subgraph,Corrected_number)%>%
+  dplyr::filter(Subgraph == "Prey_mammal_bird" |
+                  Subgraph == "Prey_reptile_bird")%>%
+  summarize(Corrected_number=sum(Corrected_number))%>%
+  mutate(Subgraph = "Bird_one_prey")%>%
+  rbind(subgraphdata%>%
+          select(Subgraph,Corrected_number)%>%
+          dplyr::filter(Subgraph == "Prey_mammal_bird" |
+                          Subgraph == "Prey_mammal_reptile")%>%
+          summarize(Corrected_number=sum(Corrected_number))%>%
+          mutate(Subgraph = "Mammal_one_prey"))%>%
+  rbind(subgraphdata%>%
+          select(Subgraph,Corrected_number)%>%
+          dplyr::filter(Subgraph == "Prey_reptile_bird" |
+                          Subgraph == "Prey_mammal_reptile")%>%
+          summarize(Corrected_number=sum(Corrected_number))%>%
+          mutate(Subgraph = "Reptile_one_prey"))%>%
+  rbind(subgraphdata%>%
+          select(Subgraph,Corrected_number))
+
+apparentzscore<-randomapparent%>%
+  group_by(number)%>%
+  dplyr::filter(Subgraph == "Prey_mammal_bird" |
+                  Subgraph == "Prey_reptile_bird")%>%
+  summarize(count=sum(count))%>%
+  mutate(Subgraph = "Bird_one_prey")%>%
+  rbind(randomapparent%>%
+          group_by(number)%>%
+          dplyr::filter(Subgraph == "Prey_mammal_bird" |
+                          Subgraph == "Prey_mammal_reptile")%>%
+          summarize(count=sum(count))%>%
+          mutate(Subgraph = "Mammal_one_prey"))%>%
+  rbind(randomapparent%>%
+          group_by(number)%>%
+          dplyr::filter(Subgraph == "Prey_reptile_bird" |
+                          Subgraph == "Prey_mammal_reptile")%>%
+          summarize(count=sum(count))%>%
+          mutate(Subgraph = "Reptile_one_prey"))%>%
+  rbind(randomapparent)%>%
+  group_by(Subgraph)%>%
+  summarize(mean = mean(count),
+            sd = sd(count))%>%
+  full_join(subgraphdatacomplete%>%
+              select(Subgraph,Corrected_number))%>%
+  mutate(z_score = (Corrected_number - mean)/sd)%>%
+  mutate(pvalue = ifelse(z_score < 0, pnorm(z_score,lower.tail = TRUE),
+                         pnorm(z_score,lower.tail = FALSE)))
+
+apparentzscore<-apparentzscore%>%
+  filter(Subgraph != "Prey_mammal_reptile"&
+           Subgraph != "Prey_mammal_bird"&
+           Subgraph != "Prey_reptile_bird")%>%
+  mutate(Taxon = ifelse(Subgraph == "All_three_birds"|
+                          Subgraph == "Bird_one_prey" |
+                          Subgraph ==  "Birds_both_prey",
+         "Aves","Other"))%>%
+  mutate(Taxon = ifelse(Subgraph == "All_three_mammals"|
+                          Subgraph == "Mammal_one_prey" |
+                          Subgraph ==  "Mammals_both_prey",
+                        "Mammalia",Taxon))%>%
+  mutate(Taxon = ifelse(Taxon == "Other","Reptilia",Taxon))%>%
+  mutate(Position = ifelse(Subgraph == "All_three_birds" |
+                         Subgraph == "All_three_mammals"|
+                         Subgraph == "All_three_reptiles",
+                       "All", "Other"))%>%
+  mutate(Position = ifelse(Subgraph == "Bird_one_prey" |
+                             Subgraph == "Mammal_one_prey"|
+                             Subgraph == "Reptile_one_prey",
+                           "Prey (One)", Position))%>%
+  mutate(Position = ifelse(Subgraph == "Birds_both_prey" |
+                             Subgraph == "Mammals_both_prey"|
+                             Subgraph == "Reptiles_both_prey",
+                           "Prey (Both)", Position))
+
+apparent<-ggplot(apparzentzscore%>%
+                   filter(Position != "All"),aes(Position, z_score, color=Taxon))+geom_point()+
+  ylab("Z Score")+xlab("")+geom_hline(yintercept=1.97,linetype=2)+
+  geom_hline(yintercept=-1.97,linetype=2)+theme_bw()+theme(legend.text=element_text(size=13), axis.text = 
+                                                             element_text(color = "black"),
+                                                           # axis.text.x = element_text(angle = 45, vjust = 0.5),
+                                                           strip.text.x = element_text(size = 13),
+                                                           legend.title=element_text(size=13), 
+                                                           axis.title = element_text(size = 13),
+                                                           axis.text.x = element_text(size=13))
+  
+
+randomtrophic<-list.files("Erdosrandomtritrophic/", full.names = TRUE)%>%
+  lapply(fread)%>%
+  rbindlist()%>%
+  select(-1)%>%
+  group_by(Trophic_Level, Taxon)%>%
+  summarize(mean=mean(Total),
+            sd=sd(Total))%>%
+  filter(Trophic_Level == "Apex")%>%
+  filter(Taxon != "Invertebrate"&
+           Taxon != "Producer")
+
+tritrophic<-ggplot(trophiccascades%>%
+  filter(Subgraph == "Birds_apex"|
+           Subgraph == "Mammals_apex"|
+           Subgraph == "Reptiles_apex")%>%
+  mutate(Taxon = c("Bird","Mammal","Reptile"))%>%
+  inner_join(randomtrophic)%>%
+  mutate(Taxon = c("Aves","Mammalia","Reptilia"))%>%
+  mutate(z_score = (Number - mean)/sd)%>%
+    mutate(pvalue = ifelse(z_score < 0, pnorm(z_score,lower.tail = TRUE),
+                           pnorm(z_score,lower.tail = FALSE))),
+aes(Trophic_Level,z_score,color=Taxon))+
+  geom_point()+  ylab("Z Score")+xlab("")+geom_hline(yintercept=1.97,linetype=2)+
+  geom_hline(yintercept=-1.97,linetype=2)+theme_bw()+
+  theme(legend.text=element_text(size=13),
+        axis.text =element_text(color = "black"),
+        # axis.text.x = element_text(angle = 45, vjust = 0.5),
+        strip.text.x = element_text(size = 13),
+        legend.title=element_text(size=13),
+        axis.title = element_text(size = 13),
+        axis.text.x = element_text(size=13))
+
+library(ggpubr)
+
+ggarrange(apparent, tritrophic, nrow = 2, common.legend = TRUE, legend = 'right')
+
+```

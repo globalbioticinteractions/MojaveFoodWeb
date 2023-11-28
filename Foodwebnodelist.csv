@@ -1,0 +1,301 @@
+Id,Label,kingdom,phylum,class,order,family,genus,species,category,taxon,aggregate
+Canis latrans,,Animalia,Chordata,Mammalia,Carnivora,Canidae,Canis,Canis latrans,vert.endo,Mammal,Canis latrans
+Ammospermophilus leucurus,,Animalia,Chordata,Mammalia,Rodentia,Sciuridae,Ammospermophilus,Ammospermophilus leucurus,vert.endo,Mammal,Ammospermophilus leucurus
+Vulpes macrotis,,Animalia,Chordata,Mammalia,Carnivora,Canidae,Vulpes,Vulpes macrotis,vert.endo,Mammal,Vulpes macrotis
+Bassariscus astutus,,Animalia,Chordata,Mammalia,Carnivora,Procyonidae,Bassariscus,Bassariscus astutus,vert.endo,Mammal,Bassariscus astutus
+Lynx rufus,,Animalia,Chordata,Mammalia,Carnivora,Felidae,Lynx,Lynx rufus,vert.endo,Mammal,Lynx rufus
+Puma concolor,,Animalia,Chordata,Mammalia,Carnivora,Felidae,Puma,Puma concolor,vert.endo,Mammal,Puma concolor
+Taxidea taxus,,Animalia,Chordata,Mammalia,Carnivora,Mustelidae,Taxidea,Taxidea taxus,vert.endo,Mammal,Taxidea taxus
+Antrozous pallidus,,Animalia,Chordata,Mammalia,Chiroptera,Vespertilionidae,Antrozous,Antrozous pallidus,vert.endo,Mammal,Antrozous pallidus
+Bubo virginianus,,Animalia,Chordata,Aves,Strigiformes,Strigidae,Bubo,Bubo virginianus,vert.endo,Bird,Bubo virginianus
+Aquila chrysaetos,,Animalia,Chordata,Aves,Accipitriformes,Accipitridae,Aquila,Aquila chrysaetos,vert.endo,Bird,Aquila chrysaetos
+Tamias panamintinus,,Animalia,Chordata,Mammalia,Rodentia,Sciuridae,Tamias,Tamias panamintinus,vert.endo,Mammal,Tamias panamintinus
+Antilocapra americana,,Animalia,Chordata,Mammalia,Artiodactyla,Antilocapridae,Antilocapra,Antilocapra americana,vert.endo,Mammal,Antilocapra americana
+Sylvilagus audubonii,,Animalia,Chordata,Mammalia,Lagomorpha,Leporidae,Sylvilagus,Sylvilagus audubonii,vert.endo,Mammal,Sylvilagus audubonii
+Dipodomys merriami,,Animalia,Chordata,Mammalia,Rodentia,Heteromyidae,Dipodomys,Dipodomys merriami,vert.endo,Mammal,Dipodomys merriami
+Lepus californicus,,Animalia,Chordata,Mammalia,Lagomorpha,Leporidae,Lepus,Lepus californicus,vert.endo,Mammal,Lepus californicus
+Xerospermophilus mohavensis,,Animalia,Chordata,Mammalia,Rodentia,Sciuridae,Xerospermophilus,Xerospermophilus mohavensis,vert.endo,Mammal,Xerospermophilus mohavensis
+Ovis canadensis,,Animalia,Chordata,Mammalia,Artiodactyla,Bovidae,Ovis,Ovis canadensis,vert.endo,Mammal,Ovis canadensis
+Peromyscus truei,,Animalia,Chordata,Mammalia,Rodentia,Cricetidae,Peromyscus,Peromyscus truei,vert.endo,Mammal,Peromyscus truei
+Neotoma lepida,,Animalia,Chordata,Mammalia,Rodentia,Cricetidae,Neotoma,Neotoma lepida,vert.endo,Mammal,Neotoma lepida
+Chaetodipus formosus,,Animalia,Chordata,Mammalia,Rodentia,Heteromyidae,Chaetodipus,Chaetodipus formosus,vert.endo,Mammal,Chaetodipus formosus
+Thomomys bottae,,Animalia,Chordata,Mammalia,Rodentia,Geomyidae,Thomomys,Thomomys bottae,vert.endo,Mammal,Thomomys bottae
+Odocoileus hemionus,,Animalia,Chordata,Mammalia,Artiodactyla,Cervidae,Odocoileus,Odocoileus hemionus,vert.endo,Mammal,Odocoileus hemionus
+Equus asinus,,Animalia,Chordata,Mammalia,Perissodactyla,Equidae,Equus,Equus asinus,vert.endo,Mammal,Equus asinus
+Notiosorex crawfordi,,Animalia,Chordata,Mammalia,Soricomorpha,Soricidae,Notiosorex,Notiosorex crawfordi,vert.endo,Mammal,Notiosorex crawfordi
+Urocyon cinereoargenteus,,Animalia,Chordata,Mammalia,Carnivora,Canidae,Urocyon,Urocyon cinereoargenteus,vert.endo,Mammal,Urocyon cinereoargenteus
+Dipodomys deserti,,Animalia,Chordata,Mammalia,Rodentia,Heteromyidae,Dipodomys,Dipodomys deserti,vert.endo,Mammal,Dipodomys deserti
+Dipodomys microps,,Animalia,Chordata,Mammalia,Rodentia,Heteromyidae,Dipodomys,Dipodomys microps,vert.endo,Mammal,Dipodomys microps
+Equus caballus,,Animalia,Chordata,Mammalia,Perissodactyla,Equidae,Equus,Equus caballus,vert.endo,Mammal,Equus caballus
+Chaetodipus penicillatus,,Animalia,Chordata,Mammalia,Rodentia,Heteromyidae,Chaetodipus,Chaetodipus penicillatus,vert.endo,Mammal,Chaetodipus penicillatus
+Chaetodipus spinatus,,Animalia,Chordata,Mammalia,Rodentia,Heteromyidae,Chaetodipus,Chaetodipus spinatus,vert.endo,Mammal,Chaetodipus spinatus
+Otospermophilus variegatus,,Animalia,Chordata,Mammalia,Rodentia,Sciuridae,Otospermophilus,Otospermophilus variegatus,vert.endo,Mammal,Otospermophilus variegatus
+Peromyscus eremicus,,Animalia,Chordata,Mammalia,Rodentia,Cricetidae,Peromyscus,Peromyscus eremicus,vert.endo,Mammal,Peromyscus eremicus
+Peromyscus maniculatus,,Animalia,Chordata,Mammalia,Rodentia,Cricetidae,Peromyscus,Peromyscus maniculatus,vert.endo,Mammal,Peromyscus maniculatus
+Xerospermophilus tereticaudus,,Animalia,Chordata,Mammalia,Rodentia,Sciuridae,Xerospermophilus,Xerospermophilus tereticaudus,vert.endo,Mammal,Xerospermophilus tereticaudus
+Spilogale gracilis,,Animalia,Chordata,Mammalia,Carnivora,Mephitidae,Spilogale,Spilogale gracilis,vert.endo,Mammal,Spilogale gracilis
+Mephitis mephitis,,Animalia,Chordata,Mammalia,Carnivora,Mephitidae,Mephitis,Mephitis mephitis,vert.endo,Mammal,Mephitis mephitis
+Parastrellus hesperus,,Animalia,Chordata,Mammalia,Chiroptera,Vespertilionidae,Parastrellus,Parastrellus hesperus,vert.endo,Mammal,Parastrellus hesperus
+Corynorhinus townsendii,,Animalia,Chordata,Mammalia,Chiroptera,Vespertilionidae,Corynorhinus,Corynorhinus townsendii,vert.endo,Mammal,Corynorhinus townsendii
+Aeorestes cinereus,,Animalia,Chordata,Mammalia,Chiroptera,Vespertilionidae,Aeorestes,Aeorestes cinereus,vert.endo,Mammal,Aeorestes cinereus
+Myotis ciliolabrum,,Animalia,Chordata,Mammalia,Chiroptera,Vespertilionidae,Myotis,Myotis ciliolabrum,vert.endo,Mammal,Myotis ciliolabrum
+Euderma maculatum,,Animalia,Chordata,Mammalia,Chiroptera,Vespertilionidae,Euderma,Euderma maculatum,vert.endo,Mammal,Euderma maculatum
+Lasionycteris noctivagans,,Animalia,Chordata,Mammalia,Chiroptera,Vespertilionidae,Lasionycteris,Lasionycteris noctivagans,vert.endo,Mammal,Lasionycteris noctivagans
+Macrotus californicus,,Animalia,Chordata,Mammalia,Chiroptera,Phyllostomidae,Macrotus,Macrotus californicus,vert.endo,Mammal,Macrotus californicus
+Myotis californicus,,Animalia,Chordata,Mammalia,Chiroptera,Vespertilionidae,Myotis,Myotis californicus,vert.endo,Mammal,Myotis californicus
+Tadarida brasiliensis,,Animalia,Chordata,Mammalia,Chiroptera,Molossidae,Tadarida,Tadarida brasiliensis,vert.endo,Mammal,Tadarida brasiliensis
+Masticophis flagellum,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Masticophis,Masticophis flagellum,vert.ecto,Reptile,Masticophis flagellum
+Crotalus atrox,,Animalia,Chordata,Reptilia,Squamata,Viperidae,Crotalus,Crotalus atrox,vert.ecto,Reptile,Crotalus atrox
+Geococcyx californianus,,Animalia,Chordata,Aves,Cuculiformes,Cuculidae,Geococcyx,Geococcyx californianus,vert.endo,Bird,Geococcyx californianus
+Meleagris gallopavo,,Animalia,Chordata,Aves,Galliformes,Phasianidae,Meleagris,Meleagris gallopavo,vert.endo,Bird,Meleagris gallopavo
+Masticophis taeniatus,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Masticophis,Masticophis taeniatus,vert.ecto,Reptile,Masticophis taeniatus
+Buteo jamaicensis,,Animalia,Chordata,Aves,Accipitriformes,Accipitridae,Buteo,Buteo jamaicensis,vert.endo,Bird,Buteo jamaicensis
+Falco sparverius,,Animalia,Chordata,Aves,Falconiformes,Falconidae,Falco,Falco sparverius,vert.endo,Bird,Falco sparverius
+Arizona elegans,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Arizona,Arizona elegans,vert.ecto,Reptile,Arizona elegans
+Pituophis catenifer,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Pituophis,Pituophis catenifer,vert.ecto,Reptile,Pituophis catenifer
+Lampropeltis californiae,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Lampropeltis,Lampropeltis californiae,vert.ecto,Reptile,Lampropeltis californiae
+Crotalus scutulatus,,Animalia,Chordata,Reptilia,Squamata,Viperidae,Crotalus,Crotalus scutulatus,vert.ecto,Reptile,Crotalus scutulatus
+Crotalus molossus,,Animalia,Chordata,Reptilia,Squamata,Viperidae,Crotalus,Crotalus molossus,vert.ecto,Reptile,Crotalus molossus
+Crotalus stephensi,,Animalia,Chordata,Reptilia,Squamata,Viperidae,Crotalus,Crotalus stephensi,vert.ecto,Reptile,Crotalus stephensi
+Crotalus pyrrhus,,Animalia,Chordata,Reptilia,Squamata,Viperidae,Crotalus,Crotalus pyrrhus,vert.ecto,Reptile,Crotalus pyrrhus
+Crotalus cerastes,,Animalia,Chordata,Reptilia,Squamata,Viperidae,Crotalus,Crotalus cerastes,vert.ecto,Reptile,Crotalus cerastes
+Lichanura orcutti,,Animalia,Chordata,Reptilia,Squamata,Boidae,Lichanura,Lichanura orcutti,vert.ecto,Reptile,Lichanura orcutti
+Accipiter cooperii,,Animalia,Chordata,Aves,Accipitriformes,Accipitridae,Accipiter,Accipiter cooperii,vert.endo,Bird,Accipiter cooperii
+Heloderma suspectum,,Animalia,Chordata,Reptilia,Squamata,Helodermatidae,Heloderma,Heloderma suspectum,vert.ecto,Reptile,Heloderma suspectum
+Cathartes aura,,Animalia,Chordata,Aves,Accipitriformes,Cathartidae,Cathartes,Cathartes aura,vert.endo,Bird,Cathartes aura
+Phyllorhynchus decurtatus,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Phyllorhynchus,Phyllorhynchus decurtatus,vert.ecto,Reptile,Phyllorhynchus decurtatus
+Gambelia wislizenii,,Animalia,Chordata,Reptilia,Squamata,Crotaphytidae,Gambelia,Gambelia wislizenii,vert.ecto,Reptile,Gambelia wislizenii
+Xantusia vigilis,,Animalia,Chordata,Reptilia,Squamata,Xantusiidae,Xantusia,Xantusia vigilis,vert.ecto,Reptile,Xantusia vigilis
+Lanius ludovicianus,,Animalia,Chordata,Aves,Passeriformes,Laniidae,Lanius,Lanius ludovicianus,vert.endo,Bird,Lanius ludovicianus
+Trimorphodon lyrophanes,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Trimorphodon,Trimorphodon lyrophanes,vert.ecto,Reptile,Trimorphodon lyrophanes
+Masticophis lateralis,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Masticophis,Masticophis lateralis,vert.ecto,Reptile,Masticophis lateralis
+Rhinocheilus lecontei,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Rhinocheilus,Rhinocheilus lecontei,vert.ecto,Reptile,Rhinocheilus lecontei
+Salvadora hexalepis,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Salvadora,Salvadora hexalepis,vert.ecto,Reptile,Salvadora hexalepis
+Crotaphytus collaris,,Animalia,Chordata,Reptilia,Squamata,Crotaphytidae,Crotaphytus,Crotaphytus collaris,vert.ecto,Reptile,Crotaphytus collaris
+Dipsosaurus dorsalis,,Animalia,Chordata,Reptilia,Squamata,Iguanidae,Dipsosaurus,Dipsosaurus dorsalis,vert.ecto,Reptile,Dipsosaurus dorsalis
+Gopherus agassizii,,Animalia,Chordata,NA,NA,Testudinidae,Gopherus,Gopherus agassizii,vert.ecto,Reptile,Gopherus agassizii
+Phrynosoma platyrhinos,,Animalia,Chordata,Reptilia,Squamata,Phrynosomatidae,Phrynosoma,Phrynosoma platyrhinos,vert.ecto,Reptile,Phrynosoma platyrhinos
+Sauromalus ater,,Animalia,Chordata,Reptilia,Squamata,Iguanidae,Sauromalus,Sauromalus ater,vert.ecto,Reptile,Sauromalus ater
+Sceloporus graciosus,,Animalia,Chordata,Reptilia,Squamata,Phrynosomatidae,Sceloporus,Sceloporus graciosus,vert.ecto,Reptile,Sceloporus graciosus
+Sceloporus occidentalis,,Animalia,Chordata,Reptilia,Squamata,Phrynosomatidae,Sceloporus,Sceloporus occidentalis,vert.ecto,Reptile,Sceloporus occidentalis
+Sceloporus uniformis,,Animalia,Chordata,Reptilia,Squamata,Phrynosomatidae,Sceloporus,Sceloporus uniformis,vert.ecto,Reptile,Sceloporus uniformis
+Uta stansburiana,,Animalia,Chordata,Reptilia,Squamata,Phrynosomatidae,Uta,Uta stansburiana,vert.ecto,Reptile,Uta stansburiana
+Coleonyx variegatus,,Animalia,Chordata,Reptilia,Squamata,Eublepharidae,Coleonyx,Coleonyx variegatus,vert.ecto,Reptile,Coleonyx variegatus
+Uma scoparia,,Animalia,Chordata,Reptilia,Squamata,Phrynosomatidae,Uma,Uma scoparia,vert.ecto,Reptile,Uma scoparia
+Rena humilis,,Animalia,Chordata,Reptilia,Squamata,Leptotyphlopidae,Rena,Rena humilis,vert.ecto,Reptile,Rena humilis
+Cophosaurus texanus,,Animalia,Chordata,Reptilia,Squamata,Phrynosomatidae,Cophosaurus,Cophosaurus texanus,vert.ecto,Reptile,Cophosaurus texanus
+Urosaurus graciosus,,Animalia,Chordata,Reptilia,Squamata,Phrynosomatidae,Urosaurus,Urosaurus graciosus,vert.ecto,Reptile,Urosaurus graciosus
+Aspidoscelis tigris,,Animalia,Chordata,Reptilia,Squamata,Teiidae,Aspidoscelis,Aspidoscelis tigris,vert.ecto,Reptile,Aspidoscelis tigris
+Callisaurus draconoides,,Animalia,Chordata,Reptilia,Squamata,Phrynosomatidae,Callisaurus,Callisaurus draconoides,vert.ecto,Reptile,Callisaurus draconoides
+Sceloporus magister,,Animalia,Chordata,Reptilia,Squamata,Phrynosomatidae,Sceloporus,Sceloporus magister,vert.ecto,Reptile,Sceloporus magister
+Crotaphytus bicinctores,,Animalia,Chordata,Reptilia,Squamata,Crotaphytidae,Crotaphytus,Crotaphytus bicinctores,vert.ecto,Reptile,Crotaphytus bicinctores
+Chionactis annulata,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Chionactis,Chionactis annulata,vert.ecto,Reptile,Chionactis annulata
+Sonora occipitalis,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Sonora,Sonora occipitalis,vert.ecto,Reptile,Sonora occipitalis
+Sonora semiannulata,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Sonora,Sonora semiannulata,vert.ecto,Reptile,Sonora semiannulata
+Tantilla hobartsmithi,,Animalia,Chordata,Reptilia,Squamata,Colubridae,Tantilla,Tantilla hobartsmithi,vert.ecto,Reptile,Tantilla hobartsmithi
+Accipiter gentilis,,Animalia,Chordata,Aves,Accipitriformes,Accipitridae,Accipiter,Accipiter gentilis,vert.endo,Bird,Accipiter gentilis
+Accipiter striatus,,Animalia,Chordata,Aves,Accipitriformes,Accipitridae,Accipiter,Accipiter striatus,vert.endo,Bird,Accipiter striatus
+Athene cunicularia,,Animalia,Chordata,Aves,Strigiformes,Strigidae,Athene,Athene cunicularia,vert.endo,Bird,Athene cunicularia
+Buteo swainsoni,,Animalia,Chordata,Aves,Accipitriformes,Accipitridae,Buteo,Buteo swainsoni,vert.endo,Bird,Buteo swainsoni
+Corvus corax,,Animalia,Chordata,Aves,Passeriformes,Corvidae,Corvus,Corvus corax,vert.endo,Bird,Corvus corax
+Falco mexicanus,,Animalia,Chordata,Aves,Falconiformes,Falconidae,Falco,Falco mexicanus,vert.endo,Bird,Falco mexicanus
+Falco peregrinus,,Animalia,Chordata,Aves,Falconiformes,Falconidae,Falco,Falco peregrinus,vert.endo,Bird,Falco peregrinus
+Megascops kennicottii,,Animalia,Chordata,Aves,Strigiformes,Strigidae,Megascops,Megascops kennicottii,vert.endo,Bird,Megascops kennicottii
+Agelaius phoeniceus,,Animalia,Chordata,Aves,Passeriformes,Icteridae,Agelaius,Agelaius phoeniceus,vert.endo,Bird,Agelaius phoeniceus
+Aimophila ruficeps,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Aimophila,Aimophila ruficeps,vert.endo,Bird,Aimophila ruficeps
+Alectoris chukar,,Animalia,Chordata,Aves,Galliformes,Phasianidae,Alectoris,Alectoris chukar,vert.endo,Bird,Alectoris chukar
+Amphispiza bilineata,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Amphispiza,Amphispiza bilineata,vert.endo,Bird,Amphispiza bilineata
+Aphelocoma woodhouseii,,Animalia,Chordata,Aves,Passeriformes,Corvidae,Aphelocoma,Aphelocoma woodhouseii,vert.endo,Bird,Aphelocoma woodhouseii
+Archilochus alexandri,,Animalia,Chordata,Aves,Apodiformes,Trochilidae,Archilochus,Archilochus alexandri,vert.endo,Bird,Archilochus alexandri
+Artemisiospiza nevadensis,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Artemisiospiza,Artemisiospiza nevadensis,vert.endo,Bird,Artemisiospiza nevadensis
+Auriparus flaviceps,,Animalia,Chordata,Aves,Passeriformes,Remizidae,Auriparus,Auriparus flaviceps,vert.endo,Bird,Auriparus flaviceps
+Baeolophus inornatus,,Animalia,Chordata,Aves,Passeriformes,Paridae,Baeolophus,Baeolophus inornatus,vert.endo,Bird,Baeolophus inornatus
+Baeolophus ridgwayi,,Animalia,Chordata,Aves,Passeriformes,Paridae,Baeolophus,Baeolophus ridgwayi,vert.endo,Bird,Baeolophus ridgwayi
+Callipepla californica,,Animalia,Chordata,Aves,Galliformes,Odontophoridae,Callipepla,Callipepla californica,vert.endo,Bird,Callipepla californica
+Callipepla gambelii,,Animalia,Chordata,Aves,Galliformes,Odontophoridae,Callipepla,Callipepla gambelii,vert.endo,Bird,Callipepla gambelii
+Calypte anna,,Animalia,Chordata,Aves,Apodiformes,Trochilidae,Calypte,Calypte anna,vert.endo,Bird,Calypte anna
+Calypte costae,,Animalia,Chordata,Aves,Apodiformes,Trochilidae,Calypte,Calypte costae,vert.endo,Bird,Calypte costae
+Campylorhynchus brunneicapillus,,Animalia,Chordata,Aves,Passeriformes,Troglodytidae,Campylorhynchus,Campylorhynchus brunneicapillus,vert.endo,Bird,Campylorhynchus brunneicapillus
+Catharus guttatus,,Animalia,Chordata,Aves,Passeriformes,Turdidae,Catharus,Catharus guttatus,vert.endo,Bird,Catharus guttatus
+Catharus ustulatus,,Animalia,Chordata,Aves,Passeriformes,Turdidae,Catharus,Catharus ustulatus,vert.endo,Bird,Catharus ustulatus
+Certhia americana,,Animalia,Chordata,Aves,Passeriformes,Certhiidae,Certhia,Certhia americana,vert.endo,Bird,Certhia americana
+Chamaea fasciata,,Animalia,Chordata,Aves,Passeriformes,Sylviidae,Chamaea,Chamaea fasciata,vert.endo,Bird,Chamaea fasciata
+Chondestes grammacus,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Chondestes,Chondestes grammacus,vert.endo,Bird,Chondestes grammacus
+Colaptes auratus,,Animalia,Chordata,Aves,Piciformes,Picidae,Colaptes,Colaptes auratus,vert.endo,Bird,Colaptes auratus
+Colaptes chrysoides,,Animalia,Chordata,Aves,Piciformes,Picidae,Colaptes,Colaptes chrysoides,vert.endo,Bird,Colaptes chrysoides
+Columba livia,,Animalia,Chordata,Aves,Columbiformes,Columbidae,Columba,Columba livia,vert.endo,Bird,Columba livia
+Columbina inca,,Animalia,Chordata,Aves,Columbiformes,Columbidae,Columbina,Columbina inca,vert.endo,Bird,Columbina inca
+Corvus brachyrhynchos,,Animalia,Chordata,Aves,Passeriformes,Corvidae,Corvus,Corvus brachyrhynchos,vert.endo,Bird,Corvus brachyrhynchos
+Cyanocitta stelleri,,Animalia,Chordata,Aves,Passeriformes,Corvidae,Cyanocitta,Cyanocitta stelleri,vert.endo,Bird,Cyanocitta stelleri
+Dryobates pubescens,,Animalia,Chordata,Aves,Piciformes,Picidae,Dryobates,Dryobates pubescens,vert.endo,Bird,Dryobates pubescens
+Dryobates scalaris,,Animalia,Chordata,Aves,Piciformes,Picidae,Dryobates,Dryobates scalaris,vert.endo,Bird,Dryobates scalaris
+Eremophila alpestris,,Animalia,Chordata,Aves,Passeriformes,Alaudidae,Eremophila,Eremophila alpestris,vert.endo,Bird,Eremophila alpestris
+Euphagus cyanocephalus,,Animalia,Chordata,Aves,Passeriformes,Icteridae,Euphagus,Euphagus cyanocephalus,vert.endo,Bird,Euphagus cyanocephalus
+Gymnorhinus cyanocephalus,,Animalia,Chordata,Aves,Passeriformes,Corvidae,Gymnorhinus,Gymnorhinus cyanocephalus,vert.endo,Bird,Gymnorhinus cyanocephalus
+Haemorhous cassinii,,Animalia,Chordata,Aves,Passeriformes,Fringillidae,Haemorhous,Haemorhous cassinii,vert.endo,Bird,Haemorhous cassinii
+Haemorhous mexicanus,,Animalia,Chordata,Aves,Passeriformes,Fringillidae,Haemorhous,Haemorhous mexicanus,vert.endo,Bird,Haemorhous mexicanus
+Icteria virens,,Animalia,Chordata,Aves,Passeriformes,Parulidae,Icteria,Icteria virens,vert.endo,Bird,Icteria virens
+Icterus bullockii,,Animalia,Chordata,Aves,Passeriformes,Icteridae,Icterus,Icterus bullockii,vert.endo,Bird,Icterus bullockii
+Icterus cucullatus,,Animalia,Chordata,Aves,Passeriformes,Icteridae,Icterus,Icterus cucullatus,vert.endo,Bird,Icterus cucullatus
+Icterus parisorum,,Animalia,Chordata,Aves,Passeriformes,Icteridae,Icterus,Icterus parisorum,vert.endo,Bird,Icterus parisorum
+Junco hyemalis,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Junco,Junco hyemalis,vert.endo,Bird,Junco hyemalis
+Loxia curvirostra,,Animalia,Chordata,Aves,Passeriformes,Fringillidae,Loxia,Loxia curvirostra,vert.endo,Bird,Loxia curvirostra
+Melospiza melodia,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Melospiza,Melospiza melodia,vert.endo,Bird,Melospiza melodia
+Melozone aberti,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Melozone,Melozone aberti,vert.endo,Bird,Melozone aberti
+Melozone crissalis,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Melozone,Melozone crissalis,vert.endo,Bird,Melozone crissalis
+Mimus polyglottos,,Animalia,Chordata,Aves,Passeriformes,Mimidae,Mimus,Mimus polyglottos,vert.endo,Bird,Mimus polyglottos
+Molothrus ater,,Animalia,Chordata,Aves,Passeriformes,Icteridae,Molothrus,Molothrus ater,vert.endo,Bird,Molothrus ater
+Myadestes townsendi,,Animalia,Chordata,Aves,Passeriformes,Turdidae,Myadestes,Myadestes townsendi,vert.endo,Bird,Myadestes townsendi
+Myiarchus cinerascens,,Animalia,Chordata,Aves,Passeriformes,Tyrannidae,Myiarchus,Myiarchus cinerascens,vert.endo,Bird,Myiarchus cinerascens
+Nucifraga columbiana,,Animalia,Chordata,Aves,Passeriformes,Corvidae,Nucifraga,Nucifraga columbiana,vert.endo,Bird,Nucifraga columbiana
+Oreortyx pictus,,Animalia,Chordata,Aves,Galliformes,Odontophoridae,Oreortyx,Oreortyx pictus,vert.endo,Bird,Oreortyx pictus
+Oreoscoptes montanus,,Animalia,Chordata,Aves,Passeriformes,Mimidae,Oreoscoptes,Oreoscoptes montanus,vert.endo,Bird,Oreoscoptes montanus
+Passer domesticus,,Animalia,Chordata,Aves,Passeriformes,Passeridae,Passer,Passer domesticus,vert.endo,Bird,Passer domesticus
+Passerella iliaca,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Passerella,Passerella iliaca,vert.endo,Bird,Passerella iliaca
+Passerina amoena,,Animalia,Chordata,Aves,Passeriformes,Cardinalidae,Passerina,Passerina amoena,vert.endo,Bird,Passerina amoena
+Passerina caerulea,,Animalia,Chordata,Aves,Passeriformes,Cardinalidae,Passerina,Passerina caerulea,vert.endo,Bird,Passerina caerulea
+Passerina cyanea,,Animalia,Chordata,Aves,Passeriformes,Cardinalidae,Passerina,Passerina cyanea,vert.endo,Bird,Passerina cyanea
+Patagioenas fasciata,,Animalia,Chordata,Aves,Columbiformes,Columbidae,Patagioenas,Patagioenas fasciata,vert.endo,Bird,Patagioenas fasciata
+Phainopepla nitens,,Animalia,Chordata,Aves,Passeriformes,Ptilogonatidae,Phainopepla,Phainopepla nitens,vert.endo,Bird,Phainopepla nitens
+Pheucticus melanocephalus,,Animalia,Chordata,Aves,Passeriformes,Cardinalidae,Pheucticus,Pheucticus melanocephalus,vert.endo,Bird,Pheucticus melanocephalus
+Pipilo chlorurus,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Pipilo,Pipilo chlorurus,vert.endo,Bird,Pipilo chlorurus
+Pipilo maculatus,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Pipilo,Pipilo maculatus,vert.endo,Bird,Pipilo maculatus
+Piranga ludoviciana,,Animalia,Chordata,Aves,Passeriformes,Cardinalidae,Piranga,Piranga ludoviciana,vert.endo,Bird,Piranga ludoviciana
+Poecile gambeli,,Animalia,Chordata,Aves,Passeriformes,Paridae,Poecile,Poecile gambeli,vert.endo,Bird,Poecile gambeli
+Pooecetes gramineus,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Pooecetes,Pooecetes gramineus,vert.endo,Bird,Pooecetes gramineus
+Quiscalus mexicanus,,Animalia,Chordata,Aves,Passeriformes,Icteridae,Quiscalus,Quiscalus mexicanus,vert.endo,Bird,Quiscalus mexicanus
+Regulus calendula,,Animalia,Chordata,Aves,Passeriformes,Regulidae,Regulus,Regulus calendula,vert.endo,Bird,Regulus calendula
+Sayornis nigricans,,Animalia,Chordata,Aves,Passeriformes,Tyrannidae,Sayornis,Sayornis nigricans,vert.endo,Bird,Sayornis nigricans
+Sayornis saya,,Animalia,Chordata,Aves,Passeriformes,Tyrannidae,Sayornis,Sayornis saya,vert.endo,Bird,Sayornis saya
+Selasphorus platycercus,,Animalia,Chordata,Aves,Apodiformes,Trochilidae,Selasphorus,Selasphorus platycercus,vert.endo,Bird,Selasphorus platycercus
+Sialia currucoides,,Animalia,Chordata,Aves,Passeriformes,Turdidae,Sialia,Sialia currucoides,vert.endo,Bird,Sialia currucoides
+Sialia mexicana,,Animalia,Chordata,Aves,Passeriformes,Turdidae,Sialia,Sialia mexicana,vert.endo,Bird,Sialia mexicana
+Sitta carolinensis,,Animalia,Chordata,Aves,Passeriformes,Sittidae,Sitta,Sitta carolinensis,vert.endo,Bird,Sitta carolinensis
+Sitta pygmaea,,Animalia,Chordata,Aves,Passeriformes,Sittidae,Sitta,Sitta pygmaea,vert.endo,Bird,Sitta pygmaea
+Sphyrapicus nuchalis,,Animalia,Chordata,Aves,Piciformes,Picidae,Sphyrapicus,Sphyrapicus nuchalis,vert.endo,Bird,Sphyrapicus nuchalis
+Spinus lawrencei,,Animalia,Chordata,Aves,Passeriformes,Fringillidae,Spinus,Spinus lawrencei,vert.endo,Bird,Spinus lawrencei
+Spinus pinus,,Animalia,Chordata,Aves,Passeriformes,Fringillidae,Spinus,Spinus pinus,vert.endo,Bird,Spinus pinus
+Spinus psaltria,,Animalia,Chordata,Aves,Passeriformes,Fringillidae,Spinus,Spinus psaltria,vert.endo,Bird,Spinus psaltria
+Spizella atrogularis,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Spizella,Spizella atrogularis,vert.endo,Bird,Spizella atrogularis
+Spizella breweri,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Spizella,Spizella breweri,vert.endo,Bird,Spizella breweri
+Spizella passerina,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Spizella,Spizella passerina,vert.endo,Bird,Spizella passerina
+Streptopelia decaocto,,Animalia,Chordata,Aves,Columbiformes,Columbidae,Streptopelia,Streptopelia decaocto,vert.endo,Bird,Streptopelia decaocto
+Sturnella neglecta,,Animalia,Chordata,Aves,Passeriformes,Icteridae,Sturnella,Sturnella neglecta,vert.endo,Bird,Sturnella neglecta
+Sturnus vulgaris,,Animalia,Chordata,Aves,Passeriformes,Sturnidae,Sturnus,Sturnus vulgaris,vert.endo,Bird,Sturnus vulgaris
+Toxostoma bendirei,,Animalia,Chordata,Aves,Passeriformes,Mimidae,Toxostoma,Toxostoma bendirei,vert.endo,Bird,Toxostoma bendirei
+Toxostoma crissale,,Animalia,Chordata,Aves,Passeriformes,Mimidae,Toxostoma,Toxostoma crissale,vert.endo,Bird,Toxostoma crissale
+Toxostoma curvirostre,,Animalia,Chordata,Aves,Passeriformes,Mimidae,Toxostoma,Toxostoma curvirostre,vert.endo,Bird,Toxostoma curvirostre
+Toxostoma lecontei,,Animalia,Chordata,Aves,Passeriformes,Mimidae,Toxostoma,Toxostoma lecontei,vert.endo,Bird,Toxostoma lecontei
+Toxostoma redivivum,,Animalia,Chordata,Aves,Passeriformes,Mimidae,Toxostoma,Toxostoma redivivum,vert.endo,Bird,Toxostoma redivivum
+Turdus migratorius,,Animalia,Chordata,Aves,Passeriformes,Turdidae,Turdus,Turdus migratorius,vert.endo,Bird,Turdus migratorius
+Tyrannus verticalis,,Animalia,Chordata,Aves,Passeriformes,Tyrannidae,Tyrannus,Tyrannus verticalis,vert.endo,Bird,Tyrannus verticalis
+Vireo bellii,,Animalia,Chordata,Aves,Passeriformes,Vireonidae,Vireo,Vireo bellii,vert.endo,Bird,Vireo bellii
+Vireo gilvus,,Animalia,Chordata,Aves,Passeriformes,Vireonidae,Vireo,Vireo gilvus,vert.endo,Bird,Vireo gilvus
+Vireo vicinior,,Animalia,Chordata,Aves,Passeriformes,Vireonidae,Vireo,Vireo vicinior,vert.endo,Bird,Vireo vicinior
+Xanthocephalus xanthocephalus,,Animalia,Chordata,Aves,Passeriformes,Icteridae,Xanthocephalus,Xanthocephalus xanthocephalus,vert.endo,Bird,Xanthocephalus xanthocephalus
+Zenaida asiatica,,Animalia,Chordata,Aves,Columbiformes,Columbidae,Zenaida,Zenaida asiatica,vert.endo,Bird,Zenaida asiatica
+Zenaida macroura,,Animalia,Chordata,Aves,Columbiformes,Columbidae,Zenaida,Zenaida macroura,vert.endo,Bird,Zenaida macroura
+Zonotrichia leucophrys,,Animalia,Chordata,Aves,Passeriformes,Emberizidae,Zonotrichia,Zonotrichia leucophrys,vert.endo,Bird,Zonotrichia leucophrys
+Aeronautes saxatalis,,Animalia,Chordata,Aves,Apodiformes,Apodidae,Aeronautes,Aeronautes saxatalis,vert.endo,Bird,Aeronautes saxatalis
+Catherpes mexicanus,,Animalia,Chordata,Aves,Passeriformes,Troglodytidae,Catherpes,Catherpes mexicanus,vert.endo,Bird,Catherpes mexicanus
+Charadrius vociferus,,Animalia,Chordata,Aves,Charadriiformes,Charadriidae,Charadrius,Charadrius vociferus,vert.endo,Bird,Charadrius vociferus
+Chordeiles acutipennis,,Animalia,Chordata,Aves,Caprimulgiformes,Caprimulgidae,Chordeiles,Chordeiles acutipennis,vert.endo,Bird,Chordeiles acutipennis
+Chordeiles minor,,Animalia,Chordata,Aves,Caprimulgiformes,Caprimulgidae,Chordeiles,Chordeiles minor,vert.endo,Bird,Chordeiles minor
+Cistothorus palustris,,Animalia,Chordata,Aves,Passeriformes,Troglodytidae,Cistothorus,Cistothorus palustris,vert.endo,Bird,Cistothorus palustris
+Contopus cooperi,,Animalia,Chordata,Aves,Passeriformes,Tyrannidae,Contopus,Contopus cooperi,vert.endo,Bird,Contopus cooperi
+Contopus sordidulus,,Animalia,Chordata,Aves,Passeriformes,Tyrannidae,Contopus,Contopus sordidulus,vert.endo,Bird,Contopus sordidulus
+Empidonax difficilis,,Animalia,Chordata,Aves,Passeriformes,Tyrannidae,Empidonax,Empidonax difficilis,vert.endo,Bird,Empidonax difficilis
+Empidonax oberholseri,,Animalia,Chordata,Aves,Passeriformes,Tyrannidae,Empidonax,Empidonax oberholseri,vert.endo,Bird,Empidonax oberholseri
+Empidonax occidentalis,,Animalia,Chordata,Aves,Passeriformes,Tyrannidae,Empidonax,Empidonax occidentalis,vert.endo,Bird,Empidonax occidentalis
+Empidonax traillii,,Animalia,Chordata,Aves,Passeriformes,Tyrannidae,Empidonax,Empidonax traillii,vert.endo,Bird,Empidonax traillii
+Empidonax wrightii,,Animalia,Chordata,Aves,Passeriformes,Tyrannidae,Empidonax,Empidonax wrightii,vert.endo,Bird,Empidonax wrightii
+Geothlypis tolmiei,,Animalia,Chordata,Aves,Passeriformes,Parulidae,Geothlypis,Geothlypis tolmiei,vert.endo,Bird,Geothlypis tolmiei
+Geothlypis trichas,,Animalia,Chordata,Aves,Passeriformes,Parulidae,Geothlypis,Geothlypis trichas,vert.endo,Bird,Geothlypis trichas
+Hirundo rustica,,Animalia,Chordata,Aves,Passeriformes,Hirundinidae,Hirundo,Hirundo rustica,vert.endo,Bird,Hirundo rustica
+Vermivora celata,,Animalia,Chordata,Aves,Passeriformes,Parulidae,Leiothlypis,Leiothlypis celata,vert.endo,Bird,Vermivora celata
+Leiothlypis luciae,,Animalia,Chordata,Aves,Passeriformes,Parulidae,Leiothlypis,Leiothlypis luciae,vert.endo,Bird,Leiothlypis luciae
+Leiothlypis virginiae,,Animalia,Chordata,Aves,Passeriformes,Parulidae,Leiothlypis,Leiothlypis virginiae,vert.endo,Bird,Leiothlypis virginiae
+Melanerpes uropygialis,,Animalia,Chordata,Aves,Piciformes,Picidae,Melanerpes,Melanerpes uropygialis,vert.endo,Bird,Melanerpes uropygialis
+Petrochelidon pyrrhonota,,Animalia,Chordata,Aves,Passeriformes,Hirundinidae,Petrochelidon,Petrochelidon pyrrhonota,vert.endo,Bird,Petrochelidon pyrrhonota
+Phalaenoptilus nuttallii,,Animalia,Chordata,Aves,Caprimulgiformes,Caprimulgidae,Phalaenoptilus,Phalaenoptilus nuttallii,vert.endo,Bird,Phalaenoptilus nuttallii
+Piranga rubra,,Animalia,Chordata,Aves,Passeriformes,Cardinalidae,Piranga,Piranga rubra,vert.endo,Bird,Piranga rubra
+Polioptila caerulea,,Animalia,Chordata,Aves,Passeriformes,Polioptilidae,Polioptila,Polioptila caerulea,vert.endo,Bird,Polioptila caerulea
+Polioptila melanura,,Animalia,Chordata,Aves,Passeriformes,Polioptilidae,Polioptila,Polioptila melanura,vert.endo,Bird,Polioptila melanura
+Psaltriparus minimus,,Animalia,Chordata,Aves,Passeriformes,Aegithalidae,Psaltriparus,Psaltriparus minimus,vert.endo,Bird,Psaltriparus minimus
+Pyrocephalus rubinus,,Animalia,Chordata,Aves,Passeriformes,Tyrannidae,Pyrocephalus,Pyrocephalus rubinus,vert.endo,Bird,Pyrocephalus rubinus
+Regulus satrapa,,Animalia,Chordata,Aves,Passeriformes,Regulidae,Regulus,Regulus satrapa,vert.endo,Bird,Regulus satrapa
+Salpinctes obsoletus,,Animalia,Chordata,Aves,Passeriformes,Troglodytidae,Salpinctes,Salpinctes obsoletus,vert.endo,Bird,Salpinctes obsoletus
+Setophaga graciae,,Animalia,Chordata,Aves,Passeriformes,Parulidae,Setophaga,Setophaga graciae,vert.endo,Bird,Setophaga graciae
+Setophaga nigrescens,,Animalia,Chordata,Aves,Passeriformes,Parulidae,Setophaga,Setophaga nigrescens,vert.endo,Bird,Setophaga nigrescens
+Setophaga occidentalis,,Animalia,Chordata,Aves,Passeriformes,Parulidae,Setophaga,Setophaga occidentalis,vert.endo,Bird,Setophaga occidentalis
+Setophaga petechia,,Animalia,Chordata,Aves,Passeriformes,Parulidae,Setophaga,Setophaga petechia,vert.endo,Bird,Setophaga petechia
+Stelgidopteryx serripennis,,Animalia,Chordata,Aves,Passeriformes,Hirundinidae,Stelgidopteryx,Stelgidopteryx serripennis,vert.endo,Bird,Stelgidopteryx serripennis
+Tachycineta thalassina,,Animalia,Chordata,Aves,Passeriformes,Hirundinidae,Tachycineta,Tachycineta thalassina,vert.endo,Bird,Tachycineta thalassina
+Thryomanes bewickii,,Animalia,Chordata,Aves,Passeriformes,Troglodytidae,Thryomanes,Thryomanes bewickii,vert.endo,Bird,Thryomanes bewickii
+Troglodytes aedon,,Animalia,Chordata,Aves,Passeriformes,Troglodytidae,Troglodytes,Troglodytes aedon,vert.endo,Bird,Troglodytes aedon
+Vireo plumbeus,,Animalia,Chordata,Aves,Passeriformes,Vireonidae,Vireo,Vireo plumbeus,vert.endo,Bird,Vireo plumbeus
+Orthoptera,,Animalia,Arthropoda,Insecta,Orthoptera,NA,NA,NA,invertebrate,Invertebrate,Orthoptera
+Odonata,,Animalia,Arthropoda,Insecta,Odonata,NA,NA,NA,invertebrate,Invertebrate,Odonata
+Hymenoptera,,Animalia,Arthropoda,Insecta,Hymenoptera,NA,NA,NA,invertebrate,Invertebrate,Hymenoptera
+Uropygi,,Animalia,Arthropoda,Arachnida,Uropygi,NA,NA,NA,invertebrate,Invertebrate,Uropygi
+Solifugae,,Animalia,Arthropoda,Arachnida,Solifugae,NA,NA,NA,invertebrate,Invertebrate,Solifugae
+Hemiptera,,Animalia,Arthropoda,Insecta,Hemiptera,NA,NA,NA,invertebrate,Invertebrate,Hemiptera
+Mantodea,,Animalia,Arthropoda,Insecta,Mantodea,NA,NA,NA,invertebrate,Invertebrate,Mantodea
+Araneae,,Animalia,Arthropoda,Arachnida,Araneae,NA,NA,NA,invertebrate,Invertebrate,Araneae
+Scorpiones,,Animalia,Arthropoda,Arachnida,Scorpiones,NA,NA,NA,invertebrate,Invertebrate,Scorpiones
+Pseudoscorpiones,,Animalia,Arthropoda,Arachnida,Pseudoscorpiones,NA,NA,NA,invertebrate,Invertebrate,Pseudoscorpiones
+Chilopoda,,Animalia,Arthropoda,NA,NA,NA,NA,NA,invertebrate,Invertebrate,Chilopoda
+Opiliones,,Animalia,Arthropoda,Arachnida,Opiliones,NA,NA,NA,invertebrate,Invertebrate,Opiliones
+Collembola,,Animalia,Arthropoda,NA,NA,NA,NA,NA,invertebrate,Invertebrate,Collembola
+Ephemeroptera,,Animalia,Arthropoda,Insecta,Ephemeroptera,NA,NA,NA,invertebrate,Invertebrate,Ephemeroptera
+Phasmida,,Animalia,Arthropoda,Insecta,Phasmida,NA,NA,NA,invertebrate,Invertebrate,Phasmida
+Diplopoda,,Animalia,Arthropoda,NA,NA,NA,NA,NA,invertebrate,Invertebrate,Diplopoda
+Siphonaptera,,Animalia,Arthropoda,Insecta,Siphonaptera,NA,NA,NA,invertebrate,Invertebrate,Siphonaptera
+Neuroptera,,Animalia,Arthropoda,Insecta,Neuroptera,NA,NA,NA,invertebrate,Invertebrate,Neuroptera
+Thysanoptera,,Animalia,Arthropoda,Insecta,Thysanoptera,NA,NA,NA,invertebrate,Invertebrate,Thysanoptera
+Lepidoptera,,Animalia,Arthropoda,Insecta,Lepidoptera,NA,NA,NA,invertebrate,Invertebrate,Lepidoptera
+Blattodea,,Animalia,Arthropoda,Insecta,Blattodea,NA,NA,NA,invertebrate,Invertebrate,Blattodea
+Diptera,,Animalia,Arthropoda,Insecta,Diptera,NA,NA,NA,invertebrate,Invertebrate,Diptera
+Dermaptera,,Animalia,Arthropoda,Insecta,Dermaptera,NA,NA,NA,invertebrate,Invertebrate,Dermaptera
+Coleoptera,,Animalia,Arthropoda,Insecta,Coleoptera,NA,NA,NA,invertebrate,Invertebrate,Coleoptera
+Trichoptera,,Animalia,Arthropoda,Insecta,Trichoptera,NA,NA,NA,invertebrate,Invertebrate,Trichoptera
+Solanales,,Plantae,Tracheophyta,Magnoliopsida,Solanales,NA,NA,NA,producer,Producer,Solanales
+Ephedrales,,Plantae,Tracheophyta,Gnetopsida,Ephedrales,NA,NA,NA,producer,Producer,Ephedrales
+Asparagales,,Plantae,Tracheophyta,Liliopsida,Asparagales,NA,NA,NA,producer,Producer,Asparagales
+Caryophyllales,,Plantae,Tracheophyta,Magnoliopsida,Caryophyllales,NA,NA,NA,producer,Producer,Caryophyllales
+Fabales,,Plantae,Tracheophyta,Magnoliopsida,Fabales,NA,NA,NA,producer,Producer,Fabales
+Rosales,,Plantae,Tracheophyta,Magnoliopsida,Rosales,NA,NA,NA,producer,Producer,Rosales
+Pinales,,Plantae,Tracheophyta,Pinopsida,Pinales,NA,NA,NA,producer,Producer,Pinales
+Poales,,Plantae,Tracheophyta,Liliopsida,Poales,NA,NA,NA,producer,Producer,Poales
+Boraginales,,Plantae,Tracheophyta,Magnoliopsida,Boraginales,NA,NA,NA,producer,Producer,Boraginales
+Myrtales,,Plantae,Tracheophyta,Magnoliopsida,Myrtales,NA,NA,NA,producer,Producer,Myrtales
+Geraniales,,Plantae,Tracheophyta,Magnoliopsida,Geraniales,NA,NA,NA,producer,Producer,Geraniales
+Asterales,,Plantae,Tracheophyta,Magnoliopsida,Asterales,NA,NA,NA,producer,Producer,Asterales
+Brassicales,,Plantae,Tracheophyta,Magnoliopsida,Brassicales,NA,NA,NA,producer,Producer,Brassicales
+Malpighiales,,Plantae,Tracheophyta,Magnoliopsida,Malpighiales,NA,NA,NA,producer,Producer,Malpighiales
+Malvales,,Plantae,Tracheophyta,Magnoliopsida,Malvales,NA,NA,NA,producer,Producer,Malvales
+Lamiales,,Plantae,Tracheophyta,Magnoliopsida,Lamiales,NA,NA,NA,producer,Producer,Lamiales
+Crossosomatales,,Plantae,Tracheophyta,Magnoliopsida,Crossosomatales,NA,NA,NA,producer,Producer,Crossosomatales
+Fagales,,Plantae,Tracheophyta,Magnoliopsida,Fagales,NA,NA,NA,producer,Producer,Fagales
+Ericales,,Plantae,Tracheophyta,Magnoliopsida,Ericales,NA,NA,NA,producer,Producer,Ericales
+Zygophyllales,,Plantae,Tracheophyta,Magnoliopsida,Zygophyllales,NA,NA,NA,producer,Producer,Zygophyllales
+Gentianales,,Plantae,Tracheophyta,Magnoliopsida,Gentianales,NA,NA,NA,producer,Producer,Gentianales
+Polypodiales,,Plantae,Tracheophyta,Polypodiopsida,Polypodiales,NA,NA,NA,producer,Producer,Polypodiales
+Sapindales,,Plantae,Tracheophyta,Magnoliopsida,Sapindales,NA,NA,NA,producer,Producer,Sapindales
+Ranunculales,,Plantae,Tracheophyta,Magnoliopsida,Ranunculales,NA,NA,NA,producer,Producer,Ranunculales
+Santalales,,Plantae,Tracheophyta,Magnoliopsida,Santalales,NA,NA,NA,producer,Producer,Santalales
+Commelinales,,Plantae,Tracheophyta,Liliopsida,Commelinales,NA,NA,NA,producer,Producer,Commelinales
+Vitales,,Plantae,Tracheophyta,Magnoliopsida,Vitales,NA,NA,NA,producer,Producer,Vitales
+Apiales,,Plantae,Tracheophyta,Magnoliopsida,Apiales,NA,NA,NA,producer,Producer,Apiales
+Dipsacales,,Plantae,Tracheophyta,Magnoliopsida,Dipsacales,NA,NA,NA,producer,Producer,Dipsacales
+Saxifragales,,Plantae,Tracheophyta,Magnoliopsida,Saxifragales,NA,NA,NA,producer,Producer,Saxifragales
+Proteales,,Plantae,Tracheophyta,Magnoliopsida,Proteales,NA,NA,NA,producer,Producer,Proteales
+Oxalidales,,Plantae,Tracheophyta,Magnoliopsida,Oxalidales,NA,NA,NA,producer,Producer,Oxalidales
+Arecales,,Plantae,Tracheophyta,Liliopsida,Arecales,NA,NA,NA,producer,Producer,Arecales
+Liliales,,Plantae,Tracheophyta,Liliopsida,Liliales,NA,NA,NA,producer,Producer,Liliales
+Celastrales,,Plantae,Tracheophyta,Magnoliopsida,Celastrales,NA,NA,NA,producer,Producer,Celastrales
+Cornales,,Plantae,Tracheophyta,Magnoliopsida,Cornales,NA,NA,NA,producer,Producer,Cornales
+Cupressales,,Plantae,Tracheophyta,NA,NA,Ullmanniaceae,Ullmannia,NA,producer,Producer,Cupressales
+Raphidioptera,,Animalia,Arthropoda,Insecta,Raphidioptera,NA,NA,NA,invertebrate,Invertebrate,Raphidioptera
+Garryales,,Plantae,Tracheophyta,Magnoliopsida,Garryales,NA,NA,NA,producer,Producer,Garryales
+Piperales,,Plantae,Tracheophyta,Magnoliopsida,Piperales,NA,NA,NA,producer,Producer,Piperales
