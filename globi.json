@@ -1,0 +1,50 @@
+{
+  "@context" : [ "http://www.w3.org/ns/csvw", {
+    "@language" : "en"
+  } ],
+  "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
+  "tables" : [ {
+    "@context" : [ "http://www.w3.org/ns/csvw", {
+      "@language" : "en"
+    } ],
+    "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
+    "url" : "file:///home/jorrit/proj/globi/data-new/MojaveFoodWeb/FoodwebEdgelist.csv",
+    "dcterms:bibliographicCitation" : "Eichenwald, A. J., Fefferman, N. H., & Reed, J. M. (2024). Potential extinction cascades in a desert ecosystem: Linking food web interactions to community viability. Ecology and Evolution, 14, e10930. https://doi.org/10.1002/ece3.10930",
+    "delimiter" : ",",
+    "headerRowCount" : 1,
+    "null" : [ "" ],
+    "interactionTypeName": "eats",
+    "interactionTypeId": "http://purl.obolibrary.org/obo/RO_0002470",
+    "localityName": "Mojave Desert",
+    "localityId": "GEONAMES:5373972",
+    "decimalLongitude": "-115.58416",
+    "decimalLatitude": "35.41665",
+    "tableSchema" : {
+      "columns" : [ {
+        "name" : "sourceTaxonName",
+        "titles" : "Source",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonName",
+        "titles" : "Target",
+        "datatype" : "string"
+      }, {
+        "name" : "Type",
+        "titles" : "Type",
+        "datatype" : "string"
+      }, {
+        "name" : "Id",
+        "titles" : "Id",
+        "datatype" : "string"
+      }, {
+        "name" : "Label",
+        "titles" : "Label",
+        "datatype" : "string"
+      }, {
+        "name" : "Weight",
+        "titles" : "Weight",
+        "datatype" : "string"
+      } ]
+    }
+  } ]
+}
