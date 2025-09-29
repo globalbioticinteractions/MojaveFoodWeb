@@ -11,6 +11,7 @@
     "url" : "FoodwebEdgelist.csv",
     "dcterms:bibliographicCitation" : "Eichenwald, A. J., Fefferman, N. H., & Reed, J. M. (2024). Potential extinction cascades in a desert ecosystem: Linking food web interactions to community viability. Ecology and Evolution, 14, e10930. https://doi.org/10.1002/ece3.10930",
     "delimiter" : ",",
+    "deprecated": true,
     "headerRowCount" : 1,
     "null" : [ "" ],
     "interactionTypeName": "eats",
